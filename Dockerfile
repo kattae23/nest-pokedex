@@ -26,6 +26,8 @@ RUN yarn install --prod
 
 COPY --from=builder /app/dist ./dist
 
+COPY /public /usr/src/app/public/
+
 # # Copiar el directorio y su contenido
 # RUN mkdir -p ./pokedex
 
